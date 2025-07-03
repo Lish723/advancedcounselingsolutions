@@ -1,0 +1,310 @@
+/* 🌿 Base Layout */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #f6ecef, #e4edf2, #eef4ea);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🌸 Header Styling */
+header {
+  background: linear-gradient(to bottom right, #f6ecef, #e4edf2, #eef4ea);
+  border-bottom: 4px solid rgb(66, 90, 59);
+  color: rgb(66, 90, 59);
+  text-align: center;
+  padding: 2.5rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  position: relative;
+  transition: border-color 0.3s ease;
+}
+
+/* 🌿 Hamburger Menu Wrapper */
+.hamburger-wrapper {
+  position: absolute;
+  top: 1.25rem;
+  right: 1rem;
+  z-index: 999;
+}
+
+/* 🍃 Hamburger Icon Button */
+.hamburger-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.25rem;
+  width: 2rem;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hamburger-btn:hover {
+  background-color: transparent;
+  color: inherit;
+}
+
+/* ☰ Bars Inside Hamburger Icon */
+.hamburger-btn .bar {
+  height: 2px;
+  width: 18px;
+  margin: 2px 0;
+  background-color: rgb(66, 90, 59);
+  border-radius: 1px;
+  transition: background-color 0.3s ease;
+}
+
+.hamburger-btn:hover .bar {
+  background-color: #d58f76;
+}
+
+/* 📋 Dropdown Menu Styling */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 0.5rem;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #dde7e3;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 0.25rem 0.5rem;
+  min-width: 140px;
+  transform: scale(0.85);
+  transform-origin: top right;
+  transition: transform 0.2s ease;
+}
+
+.hamburger-menu a {
+  text-decoration: none;
+  color: rgb(66, 90, 59);
+  padding: 0.35rem 0.6rem;
+  display: block;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.hamburger-menu a:hover {
+  background-color: transparent;
+  color: #d58f76;
+}
+
+.wellness-divider {
+  height: 3px;
+  width: 140px;
+  margin: 1rem auto 2rem;
+  background: linear-gradient(
+    to right,
+    #e8bfc6,
+    #c6d9ed,
+    #b9e0cd,
+    #f0e6bd,
+    #e8bfc6
+  );
+  background-size: 400% 100%;
+  animation: shimmerLine 5s ease-in-out infinite;
+  border-radius: 4px;
+  opacity: 1;
+  box-shadow: 0 0 8px rgba(200, 150, 180, 0.25);
+
+}
+
+@keyframes shimmerLine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* ✨ Decorative Divider */
+.divider-icon {
+  font-size: 1.5rem;
+  color: rgb(66, 90, 59);
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.section-line {
+  height: 3px;
+  width: 180px;
+  background: linear-gradient(to right, #f6ecef, #e4edf2, #eef4ea);
+  border-radius: 4px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+.section-divider-with-icon:hover .divider-icon {
+  transform: scale(1.2);
+  color: #3c5740;
+}
+
+.section-divider-with-icon:hover .section-line {
+  opacity: 1;
+  background: linear-gradient(to right, #eef4ea, #e4edf2, #f6ecef);
+}
+
+/* 📝 Section Headings */
+.section-subtitle {
+  text-align: center;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 500;
+  color: rgb(66, 90, 59);
+  margin-bottom: 1rem;
+  letter-spacing: 0.25px;
+}
+
+/* 📋 Toggle Buttons */
+.toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;             /* aligns multiline labels */
+    min-width: 132px;
+  max-width: 200px;
+  min-height: 3.2rem;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: rgb(66, 90, 59);
+  background-color: #d8eaff;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  white-space: normal;
+  word-break: break-word;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.2s ease;
+}
+
+
+.toggle-btn:hover {
+  background-color: #bcd8f2;
+  color: rgb(66, 90, 59);
+box-shadow: 0 2px 5px rgba(66, 90, 59, 0.08), 
+            0 0 8px rgba(120, 160, 210, 0.12); /* soft glow */
+}
+
+.toggle-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* 📦 Toggle Content */
+.toggle-content {
+  display: none;
+  padding: 0.75rem 1rem;
+  margin: 1rem auto 1.5rem;
+  max-width: 700px;
+  background-color: #f7faf9;
+  color: #333;
+  border: 1px solid #dde7e3;
+  border-radius: 6px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: auto;
+}
+
+/* 🍃 Toggle Pair Container */
+.toggle-pair {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0;
+  margin: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+
+/* 🔹 Optional Hover Movement (if needed) */
+.toggle-pair:hover {
+  transform: translateY(-2px);
+}
+
+.toggle-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0.75rem;
+  overflow-x: hidden;
+  padding: 1rem 0.5rem;
+  max-width: 880px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.compact-label {
+  font-size: 0.82rem;
+}
+
+.toggle-btn .label-wrap {color: rgb(66, 90, 59);
+}
+
+
+/* 📱 Responsive Hamburger Shrink */
+@media (max-width: 600px) {
+  .hamburger-btn {
+    height: auto;
+    width: auto;
+    padding: 0.35rem;
+  }
+
+  .hamburger-btn .bar {
+    height: 2px;
+    width: 16px;
+    margin: 2px 0; /* more vertical space between lines */
+    background-color: rgb(66, 90, 59);
+    border-radius: 1px 0;
+  }
+}
+
+#what-guides-us {
+  border: 1px dashed #ccc;
+  padding: 1rem;
+  margin-top: 2rem;
+  position: relative;  /* Important: prevent overlapping */
+  z-index: 0;
+}
+
+footer {
+  background: linear-gradient(to bottom right, #f2e3e5 10%, #e0eaef 40%, #eaf3e9 90%);
+  border-top: 4px solid rgb(66, 90, 59);
+  color: rgb(66, 90, 59);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: inset 0 4px 8px rgba(66, 90, 59, 0.08), 0 -4px 12px rgba(0, 0, 0, 0.04);
+  font-size: 0.9rem;
+}
+
+
+.section-divider-footer {
+  height: 3px;
+  width: 120px;
+  margin: 2rem;
+  opacity: 0.6;
+  border-radius: 3px;
+}
