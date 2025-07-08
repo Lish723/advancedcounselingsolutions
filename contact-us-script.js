@@ -1,7 +1,7 @@
 // 🍔 Hamburger Menu Toggle
 document.addEventListener("DOMContentLoaded", function () {
     const hamburgerBtn = document.querySelector('.hamburger-btn');
-    const mobileMenu = document.querySelector('#mobileMenu');
+    const mobileMenu = document.querySelector('#headerMenu');
 
     if (hamburgerBtn && mobileMenu) {
         // Toggle menu on hamburger button click
