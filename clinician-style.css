@@ -1,284 +1,559 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-font-family: 'Segoe UI', sans-serif;
-background: linear-gradient(to bottom right, #f7f9f8, #e8f0ec);
-color: #333;
-margin: 0;
-padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #f1f3f4 100%);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
+/* 🌸 Header Styling - Nature-Inspired Design */
 header {
-background: linear-gradient(to bottom right, #f6ecef, #e4edf2, #eef4ea);
-border-bottom: 4px solid rgb(66, 90, 59);
-color: rgb(66, 90, 59);
-text-align: center;
-padding: 2.5rem 1rem;
-font-family: 'Segoe UI', sans-serif;
-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-position: relative;
-transition: border-color 0.3s ease;
+    background: linear-gradient(145deg, #f4f8f5 0%, #e8f4ea 30%, #f0f6f1 70%, #f8faf9 100%);
+    border-bottom: 3px solid rgba(66, 90, 59, 0.2);
+    color: rgb(66, 90, 59);
+    text-align: center;
+    padding: 0.8rem 1rem 1.5rem;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 4px 20px rgba(66, 90, 59, 0.08);
+    position: relative;
+    transition: all 0.3s ease;
+    min-height: 100px;
+    overflow: hidden;
 }
 
-
-.divider-icon {
-font-size: 1.5rem;
-color: rgb(66, 90, 59);
-margin-bottom: 0.5rem;
-transition: transform 0.3s ease, color 0.3s ease;
+/* Nature-inspired floating elements */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 15% 25%, rgba(66, 90, 59, 0.03) 0%, transparent 40%),
+        radial-gradient(circle at 85% 75%, rgba(66, 90, 59, 0.02) 0%, transparent 35%),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.4) 0%, transparent 30%);
+    animation: natureFloat 15s ease-in-out infinite;
+    pointer-events: none;
 }
 
-.section-line {
-height: 3px;
-width: 180px;
-background: linear-gradient(to right, #f6ecef, #e4edf2, #eef4ea);
-border-radius: 4px;
-opacity: 0.6;
-transition: opacity 0.3s ease, background 0.3s ease;
+@keyframes natureFloat {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    33% { transform: translateY(-2px) scale(1.01); }
+    66% { transform: translateY(1px) scale(0.99); }
 }
 
-.section-divider-with-icon:hover .divider-icon {
-transform: scale(1.2);
-  color: #3c5740; /* slightly deeper green on hover */
+/* 🖼️ Logo Container */
+.logo-container {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
 }
 
-.section-divider-with-icon:hover .section-line {
-opacity: 1;
-  background: linear-gradient(to right, #eef4ea, #e4edf2, #f6ecef); /* reverse pastel flow */
-}
-
-.section-subtitle {
-text-align: center;
-font-size: 1.2rem;
-color: rgb(66, 90, 59);
-font-weight: 500;
-margin-bottom: 0.75rem;
-}
-
-.therapist-card {
-display: flex;
-flex-direction: column;
-align-items: center;
-background: #ffffffdd;
-border-radius: 12px;
-max-width: 800px;
-margin: 2rem auto;
-padding: 2rem;
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-}
-
-.therapist-img {
-width: 200px; /* or any size that feels balanced on the page */
-height: auto;
-display: block;
-margin: 0 auto 1rem auto;
-border-radius: 8px;
-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.therapist-info {
-text-align: center;
-}
-
-.clinician-name {
-font-size: 1.8rem;
-font-weight: 600;
-  color: rgb(66, 90, 59); /* soft forest green */
-margin-bottom: 0.5rem;
-}
-
-.pastel-bar {
-height: 4px;
-max-width: 160px;
-margin: 0 auto 1.5rem auto;
-background: linear-gradient(to right, #f6ecef, #e4edf2, #eef4ea);
-border-radius: 4px;
-opacity: 0.8;
-}
-
-.toggle-btn {
-  background-color: #e2efea;
-  color: rgb(66, 90, 59);
-  border: none;
-  border-radius: 8px;
-  padding: 0.6rem 1.2rem;
-  margin: 0.5rem 0;
-  width: 180px;
-  flex-shrink: 0;
-
-  font-size: 1rem;
-  font-family: inherit;
-  text-align: center;
-  cursor: pointer;
-
-  transition: 
-    background-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.1s ease,
-    box-shadow 0.3s ease;
-
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.toggle-btn:hover {
-  background-color: #d8eaff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
-}
-
-/* Click: subtle press-down effect */
-.toggle-btn:active {
-transform: scale(0.98);
-box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-.toggle-content {
-display: none;
-padding: 0.75rem 1rem;
-margin-bottom: 1rem;
-background-color: #f7faf9;
-border-radius: 6px;
-border: 1px solid #dde7e3;
- /* Transition prep */
-  opacity: 0;
-  transform: scaleY(0.95);
-  transform-origin: top;
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
-}
-
-.toggle-content.show {
-  display: block;
-  opacity: 1;
-  transform: scaleY(1);
-}
-
-.clinician-sections {
-display: flex;
-justify-content: flex-start;
-  flex-wrap: nowrap; /* prevent wrapping */
-gap: 1rem;
-margin-top: 1.5rem;
-padding-bottom: 1rem;
-  overflow-x: auto; /* allows graceful scrolling on narrow screens */
-}
-
-.toggle-card {
-flex: 0 0 auto;               /* prevent cards from stretching */
-  width: 220px;                 /* adjust to fit your button/content */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fff;
-  border: 1px solid #dde7e3;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-/* 🌸 Header Styling */
-header {
-  background: linear-gradient(to bottom right, #f6ecef, #e4edf2, #eef4ea);
-  border-bottom: 4px solid rgb(66, 90, 59);
-  color: rgb(66, 90, 59);
-  text-align: center;
-  padding: 2.5rem 1rem;
-  font-family: 'Segoe UI', sans-serif;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-  position: relative;
-  transition: border-color 0.3s ease;
+.site-logo {
+    width: auto;
+    max-height: 65px;
+    max-width: 350px;
+    object-fit: contain;
+    display: block;
+    border: none;
+    box-shadow: none;
+    outline: none;
 }
 
 /* 🌿 Hamburger Menu Wrapper */
 .hamburger-wrapper {
-  position: absolute;
-  top: 1.25rem;
-  right: 1rem;
-  z-index: 999;
+    position: absolute;
+    right: 2rem;
+    top: 1.3rem;
+    z-index: 1001;
 }
 
 /* 🍃 Hamburger Icon Button */
 .hamburger-btn {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 1.25rem;
-  width: 2rem;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  background-color: transparent;
-  color: #fff;
-  font-size: 1.2rem;
-  border-radius: 4px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.25rem;
+    width: 2rem;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .hamburger-btn:hover {
-  background-color: transparent;
-  color: inherit;
+    background-color: transparent;
 }
 
 /* ☰ Bars Inside Hamburger Icon */
 .hamburger-btn .bar {
-  height: 2px;
-  width: 18px;
-  margin: 2px 0;
-  background-color: rgb(66, 90, 59);
-  border-radius: 1px;
-  transition: background-color 0.3s ease;
+    height: 2px;
+    width: 18px;
+    margin: 2px 0;
+    background-color: rgb(66, 90, 59);
+    border-radius: 1px;
+    transition: background-color 0.3s ease;
 }
 
 .hamburger-btn:hover .bar {
-  background-color: #d58f76;
+    background-color: #d58f76;
 }
 
 /* 📋 Dropdown Menu Styling */
 .hamburger-menu {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 1.5rem;
-  right: 1rem;
-  left:auto;
-  background-color: #fff;
-  border: 1px solid #dde7e3;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  padding: 0.25rem 0.5rem;
-  min-width: 10px;
-  transform: scale(0.85);
-  transform-origin: top right;
-  transition: transform 0.2s ease;
-}
-
-.hamburger-menu a {
-  text-decoration: none;
-  color: rgb(66, 90, 59);
-  padding: 0.35rem 0.6rem;
-  display: block;
-  border-radius: 3px;
-  font-weight: 500;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease;
-}
-
-.hamburger-menu a:hover {
-  background-color: transparent;
-  color:#d58f76;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #dde7e3;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 0.3rem 0;
+    min-width: 160px;
+    z-index: 1000;
+    list-style: none;
 }
 
 .hamburger-menu.show {
-  display: flex;
-  transform: scale(1);
+    display: flex;
 }
 
+.hamburger-menu li {
+    margin: 0;
+}
+
+.hamburger-menu a {
+    text-decoration: none;
+    color: rgb(66, 90, 59);
+    padding: 0.4rem 1rem;
+    display: block;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: background-color 0.3s ease;
+}
+
+.hamburger-menu a:hover {
+    background-color: rgba(200, 221, 242, 0.3);
+    color: #d58f76;
+}
+
+/* Header Content */
+.header-top {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    z-index: 10;
+}
+
+.header-top h1 {
+    margin: 0 auto;
+    flex: 1;
+    text-align: center;
+    margin-bottom: 0.8rem;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: -0.8px;
+    color: rgb(66, 90, 59);
+    position: relative;
+    text-shadow: 0 2px 4px rgba(66, 90, 59, 0.1);
+}
+
+.header-top p {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgb(66, 90, 59);
+    font-style: italic;
+}
+
+/* ✨ Decorative Elements */
+.section-divider-with-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem auto 1.5rem;
+    position: relative;
+}
+
+.divider-icon {
+    font-size: 1.5rem;
+    color: rgb(66, 90, 59);
+    margin-bottom: 0.8rem;
+    opacity: 0.7;
+    animation: leafFloat 4s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+@keyframes leafFloat {
+    0%, 100% { transform: translateY(0px) rotate(-2deg); }
+    50% { transform: translateY(-3px) rotate(2deg); }
+}
+
+.section-line {
+    height: 2px;
+    width: 80px;
+    background: linear-gradient(to right, transparent, rgba(66, 90, 59, 0.4), rgba(66, 90, 59, 0.6), rgba(66, 90, 59, 0.4), transparent);
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(66, 90, 59, 0.1);
+}
+
+.section-line::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background: rgb(66, 90, 59);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+    box-shadow: 0 0 4px rgba(66, 90, 59, 0.3);
+}
+
+.section-divider-with-icon:hover .divider-icon {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.section-divider-with-icon:hover .section-line {
+    background: linear-gradient(to right, transparent, rgba(66, 90, 59, 0.5), transparent);
+}
+
+/* 👨‍⚕️ Therapist Card */
+.therapist-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 3rem 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.therapist-img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 2rem auto;
+    border-radius: 50%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border: 4px solid rgba(255, 255, 255, 0.8);
+}
+
+.therapist-info {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.clinician-name {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: rgb(66, 90, 59);
+    margin-bottom: 1rem;
+    letter-spacing: -0.3px;
+}
+
+.pastel-bar {
+    height: 2px;
+    max-width: 120px;
+    margin: 0 auto 1.5rem auto;
+    background: linear-gradient(to right, transparent, rgba(66, 90, 59, 0.4), transparent);
+    border-radius: 2px;
+}
+
+.therapist-info p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.therapist-info p:last-child {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: rgb(66, 90, 59);
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 1rem auto 0;
+}
+
+/* 📋 Section Subtitle */
+.section-subtitle {
+    text-align: center;
+    font-size: 1.8rem;
+    color: rgb(66, 90, 59);
+    font-weight: 400;
+    margin-bottom: 2rem;
+    letter-spacing: -0.2px;
+}
+
+/* 🔘 Toggle Sections */
+.clinician-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+.toggle-btn {
+    background: linear-gradient(135deg, #e2efea, #d8eaff);
+    color: rgb(66, 90, 59);
+    border: none;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    position: relative;
+    overflow: hidden;
+}
+
+.toggle-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.toggle-btn:hover {
+    background: linear-gradient(135deg, #d8eaff, #e2efea);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-btn:hover::before {
+    left: 100%;
+}
+
+.toggle-btn:active {
+    transform: scale(0.98);
+}
+
+.toggle-btn.active {
+    background: linear-gradient(135deg, rgb(66, 90, 59), #4a6b4f);
+    color: white;
+}
+
+.toggle-content {
+    display: none;
+    grid-column: 1 / -1;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    background: rgba(247, 250, 249, 0.8);
+    border-radius: 12px;
+    border: 1px solid rgba(66, 90, 59, 0.1);
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.toggle-content.show {
+    display: block;
+}
+
+.toggle-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.toggle-content li {
+    padding: 0.5rem 0;
+    color: #555;
+    border-bottom: 1px solid rgba(66, 90, 59, 0.1);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.toggle-content li:last-child {
+    border-bottom: none;
+}
+
+.toggle-content li::before {
+    content: '🌿';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+/* Footer */
 footer {
-background: linear-gradient(to top left, #eef4ea, #e4edf2, #f6ecef);
-border-top: 4px solid rgb(66, 90, 59);
-color: rgb(66, 90, 59);
-text-align: center;
-padding: 2rem 1rem;
-font-family: 'Segoe UI', sans-serif;
-box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.04);
-font-size: 0.9rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #f1f3f4 100%);
+    border-top: 1px solid rgba(66, 90, 59, 0.1);
+    color: rgb(66, 90, 59);
+    text-align: center;
+    padding: 2rem 1rem;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.03);
+    font-size: 0.9rem;
+    margin-top: 3rem;
+}
+
+/* Remove list markers */
+.qodef-menu-item-inner::before,
+.menu-item::before,
+.menu-item::marker {
+    content: none !important;
+    display: none !important;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+    header {
+        min-height: 110px;
+        padding: 0.8rem 1rem 1.2rem;
+    }
+
+    .header-top {
+        padding-top: 2.8rem;
+    }
+
+    .header-top h1 {
+        font-size: 2.2rem;
+        font-weight: 400;
+        letter-spacing: -0.5px;
+        margin-bottom: 0.5rem;
+    }
+
+    .header-top p {
+        font-size: 1rem;
+        max-width: 400px;
+        margin-top: 0.3rem;
+    }
+
+    .logo-container {
+        left: 1rem;
+        top: 0.8rem;
+    }
+
+    .site-logo {
+        max-height: 35px;
+    }
+
+    .hamburger-wrapper {
+        right: 1rem;
+        top: 1rem;
+    }
+
+    .hamburger-btn {
+        height: auto;
+        width: auto;
+        padding: 0.35rem;
+    }
+
+    .hamburger-btn .bar {
+        height: 2px;
+        width: 16px;
+        margin: 2px 0;
+    }
+
+    .hamburger-menu {
+        padding: 0.2rem 0;
+        min-width: 140px;
+    }
+    
+    .hamburger-menu a {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .therapist-card {
+        margin: 1rem;
+        padding: 2rem 1rem;
+    }
+
+    .therapist-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .clinician-name {
+        font-size: 1.8rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .clinician-sections {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 0.8rem;
+        max-width: 100%;
+    }
+
+    .toggle-btn {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .section-divider-with-icon {
+        margin: 1.2rem auto 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-top h1 {
+        font-size: 1.6rem;
+    }
+
+    .therapist-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .clinician-name {
+        font-size: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.3rem;
+    }
 }
