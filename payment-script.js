@@ -1,24 +1,25 @@
-
-// Hamburger Menu Toggle
-document.addEventListener("DOMContentLoaded", function () {
-    const hamburgerBtn = document.querySelector(".hamburger-btn");
-    const mobileMenu = document.getElementById("mobileMenu");
-
-    // Toggle menu on hamburger button click
-    hamburgerBtn.addEventListener("click", function () {
-        hamburgerBtn.classList.toggle("active");
-        mobileMenu.classList.toggle("visible");
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener("click", function(event) {
-        const hamburgerWrapper = document.querySelector(".hamburger-wrapper");
-        
-        if (!hamburgerWrapper.contains(event.target)) {
-            mobileMenu.classList.remove("visible");
-            hamburgerBtn.classList.remove("active");
-        }
-    });
+// Hamburger menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Find the hamburger button (you may need to adjust the selector)
+    const hamburgerButton = document.querySelector('.hamburger-button') || 
+                           document.querySelector('.menu-toggle') || 
+                           document.querySelector('#hamburger-btn');
+    
+    // Find the menu (adjust selector if needed)
+    const menu = document.querySelector('#headerMenu') || 
+                 document.querySelector('#mobileMenu') || 
+                 document.querySelector('.hamburger-menu');
+    
+    if (hamburgerButton && menu) {
+        hamburgerButton.addEventListener('click', function() {
+            // Toggle the menu visibility
+            menu.classList.toggle('show');
+            menu.classList.toggle('active');
+            
+            // Optional: Toggle hamburger button animation
+            hamburgerButton.classList.toggle('active');
+        });
+    }
 });
 
 // Payment Form Simulation
