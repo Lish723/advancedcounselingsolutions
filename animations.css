@@ -1,0 +1,699 @@
+/* 🌿 Background Animation Styles for Advanced Counseling Solutions */
+/* These animations layer behind your existing content without interference */
+
+/* Background Animation Container */
+.background-animations {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -10; /* Behind everything, even your existing elements */
+    overflow: hidden;
+}
+
+/* 🍃 Drifting Leaves */
+.leaf {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z" fill="%2366bb6a" opacity="0.6"/></svg>') no-repeat center;
+    background-size: contain;
+    animation: drift linear infinite;
+    filter: drop-shadow(0 0 3px rgba(102, 187, 106, 0.4));
+}
+
+.leaf:nth-child(1) {
+    left: 8%;
+    animation-duration: 15s;
+    animation-delay: 0s;
+    width: 40px;
+    height: 40px;
+}
+
+.leaf:nth-child(2) {
+    left: 18%;
+    animation-duration: 18s;
+    animation-delay: 2s;
+    width: 30px;
+    height: 30px;
+}
+
+.leaf:nth-child(3) {
+    left: 28%;
+    animation-duration: 12s;
+    animation-delay: 4s;
+    width: 45px;
+    height: 45px;
+}
+
+.leaf:nth-child(4) {
+    left: 72%;
+    animation-duration: 20s;
+    animation-delay: 1s;
+    width: 35px;
+    height: 35px;
+}
+
+.leaf:nth-child(5) {
+    left: 82%;
+    animation-duration: 16s;
+    animation-delay: 3s;
+    width: 38px;
+    height: 38px;
+}
+
+.leaf:nth-child(6) {
+    left: 92%;
+    animation-duration: 14s;
+    animation-delay: 5s;
+    width: 42px;
+    height: 42px;
+}
+
+.leaf:nth-child(7) {
+    left: 3%;
+    animation-duration: 17s;
+    animation-delay: 6s;
+    width: 32px;
+    height: 32px;
+}
+
+.leaf:nth-child(8) {
+    left: 52%;
+    animation-duration: 19s;
+    animation-delay: 8s;
+    width: 36px;
+    height: 36px;
+}
+
+.leaf:nth-child(9) {
+    left: 67%;
+    animation-duration: 13s;
+    animation-delay: 9s;
+    width: 44px;
+    height: 44px;
+}
+
+.leaf:nth-child(10) {
+    left: 87%;
+    animation-duration: 21s;
+    animation-delay: 11s;
+    width: 38px;
+    height: 38px;
+}
+
+@keyframes drift {
+    0% {
+        transform: translateY(-100px) rotate(0deg) translateX(0px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.7;
+    }
+    25% {
+        transform: translateY(25vh) rotate(90deg) translateX(20px);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(50vh) rotate(180deg) translateX(-15px);
+        opacity: 0.7;
+    }
+    75% {
+        transform: translateY(75vh) rotate(270deg) translateX(10px);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg) translateX(0px);
+        opacity: 0;
+    }
+}
+
+/* 💧 Pulsing Dew Drops */
+.dew-drop {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: radial-gradient(circle, rgba(173, 216, 230, 0.8) 0%, rgba(135, 206, 235, 0.5) 50%, rgba(176, 224, 230, 0.2) 100%);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+    filter: drop-shadow(0 0 6px rgba(173, 216, 230, 0.6));
+    box-shadow: 0 0 12px rgba(173, 216, 230, 0.3);
+}
+
+.dew-drop:nth-child(11) {
+    top: 15%;
+    left: 12%;
+    animation-delay: 0s;
+}
+
+.dew-drop:nth-child(12) {
+    top: 35%;
+    left: 88%;
+    animation-delay: 1s;
+}
+
+.dew-drop:nth-child(13) {
+    top: 55%;
+    left: 22%;
+    animation-delay: 2s;
+}
+
+.dew-drop:nth-child(14) {
+    top: 75%;
+    left: 78%;
+    animation-delay: 0.5s;
+}
+
+.dew-drop:nth-child(15) {
+    top: 25%;
+    left: 65%;
+    animation-delay: 1.5s;
+}
+
+.dew-drop:nth-child(16) {
+    top: 65%;
+    left: 38%;
+    animation-delay: 2.5s;
+}
+
+.dew-drop:nth-child(17) {
+    top: 8%;
+    left: 48%;
+    animation-delay: 0.8s;
+}
+
+.dew-drop:nth-child(18) {
+    top: 45%;
+    left: 4%;
+    animation-delay: 1.8s;
+}
+
+.dew-drop:nth-child(19) {
+    top: 85%;
+    left: 92%;
+    animation-delay: 2.2s;
+}
+
+.dew-drop:nth-child(20) {
+    top: 30%;
+    left: 32%;
+    animation-delay: 1.2s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.7);
+        opacity: 0.4;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0.7);
+        opacity: 0.4;
+    }
+}
+
+/* ✨ Floating Particles */
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: radial-gradient(circle, rgba(129, 199, 132, 0.7) 0%, rgba(165, 214, 167, 0.5) 60%, transparent 100%);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 3px rgba(129, 199, 132, 0.5));
+}
+
+.particle:nth-child(21) {
+    top: 20%;
+    left: 25%;
+    animation-delay: 0s;
+}
+
+.particle:nth-child(22) {
+    top: 45%;
+    left: 75%;
+    animation-delay: 2s;
+}
+
+.particle:nth-child(23) {
+    top: 70%;
+    left: 15%;
+    animation-delay: 4s;
+}
+
+.particle:nth-child(24) {
+    top: 30%;
+    left: 85%;
+    animation-delay: 1s;
+}
+
+.particle:nth-child(25) {
+    top: 60%;
+    left: 55%;
+    animation-delay: 3s;
+}
+
+.particle:nth-child(26) {
+    top: 10%;
+    left: 40%;
+    animation-delay: 5s;
+}
+
+.particle:nth-child(27) {
+    top: 80%;
+    left: 70%;
+    animation-delay: 2.5s;
+}
+
+.particle:nth-child(28) {
+    top: 50%;
+    left: 8%;
+    animation-delay: 4.5s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+        opacity: 0.4;
+    }
+    25% {
+        transform: translateY(-25px);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-12px);
+        opacity: 0.6;
+    }
+    75% {
+        transform: translateY(-35px);
+        opacity: 0.9;
+    }
+}
+
+/* 🌊 Gentle Breeze Effect */
+.breeze-line {
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(129, 199, 132, 0.5), rgba(165, 214, 167, 0.7), rgba(129, 199, 132, 0.5), transparent);
+    animation: breeze 10s ease-in-out infinite;
+    border-radius: 2px;
+    filter: drop-shadow(0 0 4px rgba(129, 199, 132, 0.3));
+}
+
+.breeze-line:nth-child(29) {
+    top: 40%;
+    left: -100px;
+    animation-delay: 0s;
+}
+
+.breeze-line:nth-child(30) {
+    top: 60%;
+    left: -100px;
+    animation-delay: 4s;
+}
+
+.breeze-line:nth-child(31) {
+    top: 20%;
+    left: -100px;
+    animation-delay: 8s;
+}
+
+.breeze-line:nth-child(32) {
+    top: 80%;
+    left: -100px;
+    animation-delay: 2s;
+}
+
+.breeze-line:nth-child(33) {
+    top: 12%;
+    left: -100px;
+    animation-delay: 6s;
+}
+
+@keyframes breeze {
+    0% {
+        left: -100px;
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+/* 💖 Floating Hearts (Self-Love/Healing) */
+.heart {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" fill="%23f48fb1" opacity="0.6"/></svg>') no-repeat center;
+    background-size: contain;
+    animation: heartDrift linear infinite;
+    filter: drop-shadow(0 0 3px rgba(244, 143, 177, 0.4));
+}
+
+.heart:nth-child(34) {
+    left: 12%;
+    animation-duration: 20s;
+    animation-delay: 0s;
+}
+
+.heart:nth-child(35) {
+    left: 78%;
+    animation-duration: 25s;
+    animation-delay: 7s;
+    width: 18px;
+    height: 18px;
+}
+
+.heart:nth-child(36) {
+    left: 42%;
+    animation-duration: 18s;
+    animation-delay: 14s;
+    width: 26px;
+    height: 26px;
+}
+
+@keyframes heartDrift {
+    0% {
+        transform: translateY(-100px) rotate(0deg) translateX(0px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    25% {
+        transform: translateY(25vh) rotate(90deg) translateX(12px);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(50vh) rotate(180deg) translateX(-8px);
+        opacity: 0.8;
+    }
+    75% {
+        transform: translateY(75vh) rotate(270deg) translateX(15px);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg) translateX(0px);
+        opacity: 0;
+    }
+}
+
+/* 🪷 Growing Lotus/Mindfulness Flowers */
+.lotus {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10Z" fill="%23ce93d8" opacity="0.5"/></svg>') no-repeat center;
+    background-size: contain;
+    animation: lotusDrift linear infinite;
+    filter: drop-shadow(0 0 4px rgba(206, 147, 216, 0.5));
+}
+
+.lotus:nth-child(37) {
+    left: 22%;
+    animation-duration: 22s;
+    animation-delay: 3s;
+}
+
+.lotus:nth-child(38) {
+    left: 88%;
+    animation-duration: 19s;
+    animation-delay: 11s;
+    width: 36px;
+    height: 36px;
+}
+
+@keyframes lotusDrift {
+    0% {
+        transform: translateY(-100px) scale(0.5) rotate(0deg) translateX(0px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.5;
+    }
+    25% {
+        transform: translateY(25vh) scale(1) rotate(90deg) translateX(-10px);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(50vh) scale(1.1) rotate(180deg) translateX(14px);
+        opacity: 0.8;
+    }
+    75% {
+        transform: translateY(75vh) scale(0.8) rotate(270deg) translateX(-6px);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(100vh) scale(0.5) rotate(360deg) translateX(0px);
+        opacity: 0;
+    }
+}
+
+/* ⭕ Breathing Circles (Mindfulness/Meditation) */
+.breath-circle {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border: 3px solid rgba(139, 195, 74, 0.5);
+    border-radius: 50%;
+    animation: circleDrift linear infinite;
+    filter: drop-shadow(0 0 6px rgba(139, 195, 74, 0.3));
+}
+
+.breath-circle:nth-child(39) {
+    left: 62%;
+    animation-duration: 24s;
+    animation-delay: 5s;
+}
+
+.breath-circle:nth-child(40) {
+    left: 8%;
+    animation-duration: 21s;
+    animation-delay: 12s;
+    width: 38px;
+    height: 38px;
+}
+
+@keyframes circleDrift {
+    0% {
+        transform: translateY(-100px) scale(0.8) translateX(0px);
+        opacity: 0;
+        border-width: 2px;
+    }
+    10% {
+        opacity: 0.4;
+    }
+    25% {
+        transform: translateY(25vh) scale(1.1) translateX(20px);
+        opacity: 0.6;
+        border-width: 4px;
+    }
+    50% {
+        transform: translateY(50vh) scale(0.9) translateX(-12px);
+        opacity: 0.7;
+        border-width: 3px;
+    }
+    75% {
+        transform: translateY(75vh) scale(1.0) translateX(16px);
+        opacity: 0.5;
+        border-width: 4px;
+    }
+    100% {
+        transform: translateY(100vh) scale(0.8) translateX(0px);
+        opacity: 0;
+        border-width: 2px;
+    }
+}
+
+/* ☀️ Gentle Healing Rays */
+.healing-ray {
+    position: absolute;
+    width: 2px;
+    height: 70px;
+    background: linear-gradient(to bottom, rgba(255, 235, 59, 0.6), transparent);
+    animation: ray 6s ease-in-out infinite;
+    transform-origin: bottom;
+    filter: drop-shadow(0 0 3px rgba(255, 235, 59, 0.4));
+}
+
+.healing-ray:nth-child(41) {
+    top: 8%;
+    left: 48%;
+    animation-delay: 0s;
+}
+
+.healing-ray:nth-child(42) {
+    top: 3%;
+    left: 72%;
+    animation-delay: 2s;
+    height: 55px;
+}
+
+.healing-ray:nth-child(43) {
+    top: 12%;
+    left: 28%;
+    animation-delay: 4s;
+    height: 65px;
+}
+
+@keyframes ray {
+    0%, 100% {
+        transform: rotate(-8deg) scaleY(0.6);
+        opacity: 0.3;
+    }
+    50% {
+        transform: rotate(8deg) scaleY(1);
+        opacity: 0.7;
+    }
+}
+
+/* 🦋 Hope Butterflies */
+.butterfly {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,2C13,2 14,3 14,4V8L17,7C18,6.78 19,7.43 19,8.5C19,9.12 18.64,9.67 18.1,9.9L15,11L18.1,12.1C18.64,12.33 19,12.88 19,13.5C19,14.57 18,15.22 17,15L14,14V18C14,19 13,20 12,20C11,20 10,19 10,18V14L7,15C6,15.22 5,14.57 5,13.5C5,12.88 5.36,12.33 5.9,12.1L9,11L5.9,9.9C5.36,9.67 5,9.12 5,8.5C5,7.43 6,6.78 7,7L10,8V4C10,3 11,2 12,2Z" fill="%23ff9800" opacity="0.6"/></svg>') no-repeat center;
+    background-size: contain;
+    animation: butterflyDrift linear infinite;
+    filter: drop-shadow(0 0 2px rgba(255, 152, 0, 0.4));
+}
+
+.butterfly:nth-child(44) {
+    left: 32%;
+    animation-duration: 26s;
+    animation-delay: 8s;
+}
+
+.butterfly:nth-child(45) {
+    left: 92%;
+    animation-duration: 23s;
+    animation-delay: 16s;
+    width: 22px;
+    height: 22px;
+}
+
+@keyframes butterflyDrift {
+    0% {
+        transform: translateY(-100px) rotate(0deg) translateX(0px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.5;
+    }
+    20% {
+        transform: translateY(20vh) rotate(72deg) translateX(25px);
+        opacity: 0.7;
+    }
+    40% {
+        transform: translateY(40vh) rotate(144deg) translateX(-20px);
+        opacity: 0.8;
+    }
+    60% {
+        transform: translateY(60vh) rotate(216deg) translateX(30px);
+        opacity: 0.7;
+    }
+    80% {
+        transform: translateY(80vh) rotate(288deg) translateX(-15px);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg) translateX(0px);
+        opacity: 0;
+    }
+}
+
+/* 📱 Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .leaf {
+        width: 28px !important;
+        height: 28px !important;
+    }
+    
+    .dew-drop {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .particle {
+        width: 5px;
+        height: 5px;
+    }
+    
+    .heart {
+        width: 18px !important;
+        height: 18px !important;
+    }
+    
+    .lotus {
+        width: 26px !important;
+        height: 26px !important;
+    }
+    
+    .breath-circle {
+        width: 35px !important;
+        height: 35px !important;
+    }
+    
+    .butterfly {
+        width: 20px !important;
+        height: 20px !important;
+    }
+    
+    .healing-ray {
+        height: 50px !important;
+    }
+    
+    .breeze-line {
+        width: 80px;
+        height: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .leaf {
+        width: 24px !important;
+        height: 24px !important;
+    }
+    
+    .dew-drop {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .heart {
+        width: 16px !important;
+        height: 16px !important;
+    }
+    
+    .lotus {
+        width: 22px !important;
+        height: 22px !important;
+    }
+    
+    .breath-circle {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    
+    .butterfly {
+        width: 18px !important;
+        height: 18px !important;
+    }
+}
