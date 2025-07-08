@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="contact-us-style.css" />
+<script src="contact-us-script.js" defer></script>
+<style>.toggle-content { display: none; }</style>
+<title>Contact Us|Advanced Counseling Solutions</title>
+</head>
+<body>
+
+<header class="header-top">
+<div class="header-row">
+<div class="logo-container">
+<a href="/index.html"><img src="https://advancedcounselingsolutions.com/wp-content/uploads/2021/10/ACS_HorzLogo_1021-e1635534070124.png"alt="Advanced Counseling Solutions logo"class="site-logo"/></a>
+</div>
+
+<nav class="header-nav">
+<div class="hamburger-wrapper">
+<button class="hamburger-btn" aria-label="Toggle menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</button>
+
+<ul class="hamburger-menu" id="mobileMenu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-xxxx"><a href="https://lish723.github.io/masterpiece/about.html"><span class="qodef-menu-item-inner"><span class="qodef-menu-item-text">About</span></span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-xxxx"><a href="https://lish723.github.io/masterpiece/services-what-to-expect.html"><span class="qodef-menu-item-inner"><span class="qodef-menu-item-text">Services & What To Expect</span></span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7239"><a href="/advancedcounselingsolutions/get-to-know-our-clinicians/clinicians.html"><span class="qodef-menu-item-inner"><span class="qodef-menu-item-text">Meet the Clinician</span></span></a></li>
+<li class="menu-item"><a href="/faq.html">FAQ</a></li>
+<li class="menu-item"><a href="/media.html">Media</a></li>
+<li class="menu-item"><a href="/payment.html">Payment</a></li>
+</ul>
+</div>
+</nav>
+<div class="header-title-container">
+<h1 class="contact-heading">Contact Us</h1>
+<div class="heading-underline shimmer"></div>
+</div>
+<h2 class="quote-left">When you reach out, we reach back—with care, compassion, and the space to be heard.</h2>
+</header>
+
+<section class="location-strip">
+<div class="location-card">
+    <h3>Austintown</h3>
+    <p>P: 330-797-0036</p>
+    <p>F: 330-797-0034</p>
+    <p>5204 Mahoning Avenue<br />Building 1, Suite 105<br />Austintown, OH 44515</p>
+</div>
+
+<div class="location-card">
+    <h3>Boardman</h3>
+    <p>P: 330-707-4433</p>
+    <p>F: 330-707-4593</p>
+    <p>1025 Boardman Canfield Road<br />Boardman, OH 44512</p>
+</div>
+
+<div class="location-card">
+    <h3>Canfield</h3>
+    <p>P: 330-967-4275</p>
+    <p>F: 330-967-4277</p>
+    <p>3974 Boardman Canfield Road<br />Canfield, OH 44406</p>
+</div>
+</section>
+
+<div class="form-feedback-section">
+<!-- Contact Us Form -->
+<section class="contact-form-wrapper">
+    <form class="contact-form" name="contact">
+    <label for="full-name">Full Name</label>
+    <input
+        type="text"
+        id="full-name"
+        name="full-name"
+        placeholder="Your name"
+        required
+    />
+
+    <label for="email">Email</label>
+    <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="your@email.com"
+        required
+    />
+
+    <label for="phone">Phone Number</label>
+    <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="(Optional)"
+    />
+
+    <label for="message">Message</label>
+    <textarea
+        id="message"
+        name="message"
+        rows="5"
+        placeholder="Type your message here..."
+        required
+    ></textarea>
+
+    <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+
+    <p id="form-error" class="form-error-message">
+    Please fill out all required fields.
+    </p>
+    <p id="form-success" class="form-success-message"></p>
+</section>
+
+<!-- Feedback Form -->
+<section class="contact-form-wrapper feedback-box">
+<form name="feedback-form" class="contact-form">
+    <label for="feedback-rating">Rate your experience</label>
+    <select id="feedback-rating" name="feedback-rating">
+    <option value="">Select one</option>
+    <option value="Excellent">Excellent 😊</option>
+    <option value="Good">Good 🙂</option>
+    <option value="Neutral">Neutral 😐</option>
+    <option value="Fair">Fair 😕</option>
+    <option value="Poor">Poor 😟</option>
+    </select>
+
+    <label for="feedback-topic">What would you like to share?</label>
+    <select id="feedback-topic" name="feedback-topic">
+    <option value="">Choose a topic</option>
+    <option value="compliment">Compliment</option>
+    <option value="suggestion">Suggestion</option>
+    <option value="question">Question</option>
+    <option value="concern">Concern</option>
+    </select>
+
+    <label for="feedback-message">Tell us more</label>
+    <textarea
+    id="feedback-message"
+    name="feedback-message"
+    rows="5"
+    placeholder="Your thoughts..."
+    ></textarea>
+
+    <button type="submit" class="submit-btn">Submit Feedback</button>
+</form>
+
+<p id="feedback-response" class="form-success-message" style="display: none;">
+    Thank you for your feedback 💌
+</p>
+</section>
+</div>
+
+<!-- Divider above the footer -->
+<div class="section-divider-footer"></div> <!-- ✅ keep this one -->
+
+<footer>
+<p>&copy; 2025 Advanced Counseling Solutions. All rights reserved.</p>
+</footer>
+</body>
+
