@@ -1,0 +1,607 @@
+/* 🌈 Page background and base typography */
+html {
+    background: #f5f5f5;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(to bottom right, #f6d6df, #cfe7f5 50%, #d3f1d8);
+    color: #333;
+    margin: 0 auto;
+    padding: 0;
+    line-height: 1.6;
+    max-width: 900px;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* 🧭 Header structure - FULL WIDTH */
+header {
+    width: 90vw;
+    max-width: 900px;
+    padding: 0.3rem 0;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    position: relative;
+    min-height: 100px;
+}
+
+/* Animated pastel border for header */
+header::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(45deg, 
+        #ffb3d1,
+        #b3e5fc,
+        #c8e6c9,
+        #fff3e0,
+        #e1bee7,
+        #ffcdd2,
+        #b3e5fc,
+        #c8e6c9
+    );
+    background-size: 400% 400%;
+    border-radius: 15px;
+    z-index: -1;
+    animation: shimmer-border 4s ease-in-out infinite;
+}
+
+@keyframes shimmer-border {
+    0%, 100% { background-position: 0% 50%; }
+    25% { background-position: 100% 50%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 0% 100%; }
+}
+
+/* 🖼️ Logo Container */
+.logo-container {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+}
+
+.site-logo {
+    width: auto;
+    max-height: 65px;
+    max-width: 350px;
+    object-fit: contain;
+    display: block;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+/* 🍔 Hamburger Menu */
+.hamburger-wrapper {
+    position: absolute;
+    top: 1.3rem;
+    right: 2rem;
+    z-index: 1001;
+}
+
+.hamburger-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 14px;
+    width: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+}
+
+.hamburger-btn .bar {
+    width: 20px;
+    height: 2px;
+    background-color: rgba(105, 135, 98, 1);
+    transition: all 0.3s ease;
+    border-radius: 1px;
+}
+
+.hamburger-btn:hover .bar {
+    background-color: #d58f76;
+}
+
+.hamburger-menu {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    width: max-content;
+    min-width: 160px;
+    max-width: 180px;
+    display: none;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    list-style: none;
+    margin: 0;
+}
+
+.hamburger-menu.show {
+    display: flex;
+}
+
+.hamburger-menu li {
+    margin: 0.2rem 0;
+}
+
+.hamburger-menu li a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    padding: 0.4rem 0.6rem;
+    display: block;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.hamburger-menu li a:hover {
+    color: #d58f76;
+    background-color: rgba(231, 140, 156, 0.1);
+}
+
+/* ✨ Title Section */
+.header-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem auto 0;
+    padding: 0 2rem;
+    padding-top: 2rem;
+}
+
+.section-subtitle {
+    font-size: 2.5rem;
+    color: rgba(66, 90, 59, 1);
+    font-family: 'Bradley Hand ITC', cursive;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 1.3;
+    text-shadow: 
+        0 0 15px rgba(66, 90, 59, 0.4),
+        0 0 25px rgba(66, 90, 59, 0.3),
+        3px 3px 6px rgba(0,0,0,0.3);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.clarity-text {
+    font-family: "Great Vibes", cursive;
+    font-size: 3.5rem;
+    background: linear-gradient(90deg, #c38ca4, #7d9a82, #5f7763, #a18cc6, #c38ca4);
+    background-size: 300% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmerPulse 8s ease-in-out infinite;
+    letter-spacing: 3px;
+}
+
+@keyframes shimmerPulse {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.glyph {
+    font-size: 1.8rem;
+    color: rgba(66, 90, 59, 0.7);
+    animation: float 4s ease-in-out infinite;
+}
+
+.glyph-left {
+    transform: rotate(-15deg);
+    animation-delay: 0s;
+}
+
+.glyph-right {
+    transform: rotate(15deg);
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(-15deg); }
+    50% { transform: translateY(-8px) rotate(-15deg); }
+}
+
+/* 🔍 FAQ Search */
+.faq-search {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.faq-search input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(66, 90, 59, 0.1);
+    box-sizing: border-box;
+}
+
+.faq-search input:focus {
+    outline: none;
+    border-color: rgba(66, 90, 59, 0.5);
+    box-shadow: 0 0 0 3px rgba(66, 90, 59, 0.1), 0 8px 25px rgba(66, 90, 59, 0.2);
+    transform: translateY(-2px);
+}
+
+.faq-search input::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+/* 📋 FAQ Toggle Sections */
+.toggle-pair {
+    max-width: 800px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+}
+
+.toggle-btn {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    font-size: 1.1rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    color: rgba(66, 90, 59, 1);
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid rgba(66, 90, 59, 0.1);
+    border-radius: 16px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(66, 90, 59, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.toggle-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #ffb3d1, #b3e5fc, #c8e6c9);
+    transition: width 0.3s ease;
+}
+
+.toggle-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(66, 90, 59, 0.25);
+    border-color: rgba(66, 90, 59, 0.3);
+}
+
+.toggle-btn:hover::before {
+    width: 8px;
+}
+
+.toggle-btn::after {
+    content: '+';
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgba(66, 90, 59, 0.7);
+    transition: transform 0.3s ease;
+}
+
+.toggle-btn.active::after {
+    content: '−';
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.toggle-content {
+    display: none;
+    padding: 2rem;
+    margin-top: 0.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(66, 90, 59, 0.1);
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.7;
+    font-size: 1rem;
+    color: #555;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 💬 FAQ CTA Section */
+.faq-contact-cta {
+    text-align: center;
+    margin: 4rem auto 3rem;
+    padding: 3rem 2rem;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(66, 90, 59, 0.2);
+}
+
+.faq-contact-cta p {
+    font-size: 1.3rem;
+    color: rgba(66, 90, 59, 1);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, rgba(66, 90, 59, 1), rgba(105, 135, 98, 1));
+    color: white;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 25px rgba(66, 90, 59, 0.3);
+}
+
+.cta-button:hover {
+    background: linear-gradient(135deg, rgba(105, 135, 98, 1), rgba(66, 90, 59, 1));
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(66, 90, 59, 0.4);
+}
+
+/* 🚧 Divider */
+.section-divider-footer {
+    height: 4px;
+    background: linear-gradient(90deg, 
+        rgba(66, 90, 59, 0.8),
+        rgba(66, 90, 59, 0.4),
+        rgba(66, 90, 59, 0.2),
+        rgba(66, 90, 59, 0.4),
+        rgba(66, 90, 59, 0.8)
+    );
+    margin: 2rem auto 0;
+    max-width: 800px;
+    border-radius: 2px;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* 🎨 Floating decorative elements - FAQ themed */
+body::before {
+    content: '❓';
+    position: fixed;
+    left: 3%;
+    top: 15%;
+    font-size: 2.5rem;
+    opacity: 0.25;
+    z-index: -1;
+    animation: float 6s ease-in-out infinite;
+}
+
+body::after {
+    content: '💡';
+    position: fixed;
+    right: 4%;
+    top: 25%;
+    font-size: 2rem;
+    opacity: 0.3;
+    z-index: -1;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+.faq-search::before {
+    content: '🔍';
+    position: fixed;
+    left: 7%;
+    top: 50%;
+    font-size: 2rem;
+    opacity: 0.2;
+    z-index: -1;
+    animation: float 7s ease-in-out infinite;
+}
+
+.faq-search::after {
+    content: '📚';
+    position: fixed;
+    right: 2%;
+    top: 65%;
+    font-size: 2.5rem;
+    opacity: 0.25;
+    z-index: -1;
+    animation: float 9s ease-in-out infinite reverse;
+}
+
+.faq-contact-cta::before {
+    content: '💬';
+    position: fixed;
+    left: 5%;
+    top: 80%;
+    font-size: 1.8rem;
+    opacity: 0.3;
+    z-index: -1;
+    animation: float 5s ease-in-out infinite;
+}
+
+.faq-contact-cta::after {
+    content: '🤝';
+    position: fixed;
+    right: 6%;
+    top: 45%;
+    font-size: 2.2rem;
+    opacity: 0.25;
+    z-index: -1;
+    animation: float 6.5s ease-in-out infinite reverse;
+}
+
+/* 🎯 Utility Classes */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* 📱 Mobile Styles */
+@media screen and (max-width: 768px) {
+    /* Header adjustments */
+    header {
+        width: 98vw;
+        max-width: none;
+        padding: 0.5rem 0;
+        min-height: 140px;
+    }
+    
+    /* Logo positioning */
+    .logo-container {
+        left: 1rem;
+        top: 0.8rem;
+    }
+    
+    .site-logo {
+        max-height: 35px;
+    }
+    
+    /* Hamburger positioning */
+    .hamburger-wrapper {
+        right: 1rem;
+        top: 1rem;
+    }
+    
+    .hamburger-btn {
+        height: 12px;
+        width: 20px;
+    }
+    
+    .hamburger-btn .bar {
+        width: 18px;
+        height: 2px;
+    }
+    
+    /* Title section - KEY FIXES */
+    .header-top {
+        padding: 3rem 1rem 1rem;
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .section-subtitle {
+        font-size: 1.4rem;
+        letter-spacing: 0.5px;
+        gap: 0.3rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .clarity-text {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .glyph {
+        font-size: 1.2rem;
+    }
+    
+    /* FAQ sections */
+    .toggle-pair {
+        padding: 0 0.5rem;
+    }
+    
+    .toggle-btn {
+        padding: 1.2rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .toggle-btn::after {
+        right: 1.5rem;
+    }
+    
+    .toggle-content {
+        padding: 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    /* CTA section */
+    .faq-contact-cta {
+        margin: 3rem auto 2rem;
+        padding: 2rem 1.5rem;
+    }
+    
+    .faq-contact-cta p {
+        font-size: 1.1rem;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+    
+    /* Search */
+    .faq-search {
+        padding: 0 0.5rem;
+    }
+}
+
+/* Extra small mobile screens */
+@media screen and (max-width: 480px) {
+    .section-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .clarity-text {
+        font-size: 1.2rem;
+    }
+    
+    .glyph {
+        font-size: 1rem;
+    }
+}

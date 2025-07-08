@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="faq-style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<script src="faq-style.js" defer></script>
+<style>.toggle-content { display: none; }</style>
+<title>Services | Advanced Counseling Solutions</title>
+</head>
+<body>
+<header>
+<div class="logo-container">
+<a href="/index.html"><img src="https://advancedcounselingsolutions.com/wp-content/uploads/2021/10/ACS_HorzLogo_1021-e1635534070124.png"alt="Advanced Counseling Solutions logo"class="site-logo"/></a>
+</div>
+
+    <div class="header-top">
+<h1 class="section-subtitle"><span class="glyph glyph-left">❦</span><span class="clarity-text">Finding Clarity, Side by Side</span><span class="glyph glyph-right">❦</span></h1>
+
+<div class="hamburger-wrapper">
+        <button class="hamburger-btn" onclick="toggleMenu()">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</button>
+</div>
+
+    <ul id="headerMenu" class="hamburger-menu">
+    <li class="menu-item"><a href="https://lish723.github.io/masterpiece/about.html"><span class="qodef-menu-item-inner"><span class="qodef-menu-item-text">About</span></span></a></li>
+    <li class="menu-item"><a href="/advancedcounselingsolutions/get-to-know-our-clinicians/clinicians.html"><span class="qodef-menu-item-inner"><span class="qodef-menu-item-text">Meet the Clinician</span></span></a></li>
+    <li class="menu-item"><a href="https://lish723.github.io/masterpiece/services-what-to-expect.html"><span class="qodef-menu-item-inner"><span class="qodef-menu-item-text">Services & What To Expect</span></span></a></li>
+    <li class="menu-item"><a href="/media.html"><span class="qodef-menu-item-inner"><span class="qodef-menu-item-text">Media</span></span></a></li>
+    <li class="menu-item"><a href="/contact.html"><span class="qodef-menu-item-inner"><span class="qodef-menu-item-text">Contact</span></span></a></li>
+    <li class="menu-item"><a href="/payment.html"><span class="qodef-menu-item-inner"><span class="qodef-menu-item-text">Payment</span></span></a></li>
+    </ul>
+</header>
+
+<div class="faq-search">
+    <label for="faqFilter" class="visually-hidden">Search FAQs</label>
+    <input type="text" id="faqFilter" onkeyup="filterFAQs()" placeholder="Search questions...">
+</div>
+
+<!-- 🌿 Toggle Buttons Row -->
+<!-- 1st toggle -->
+<div class="toggle-pair">
+    <button class="toggle-btn" onclick="toggleSection('faq1')">Protecting Your Payment</button>
+    <div id="faq1" class="toggle-content">
+        <p>The most private and secure way to pay for counseling is through direct self-pay. We accept credit cards and Health Savings Account (HSA) cards through a secure, HIPAA-compliant payment system that protects your confidentiality at every step is cash and checks.</p>
+</div>
+</div>
+
+    <!-- 2nd toggle -->
+    <div class="toggle-pair">
+    <button class="toggle-btn" onclick="toggleSection('first-session')">Can I Use My Insurance?</button>
+    <div id="first-session" class="toggle-content">
+        <p>Most plans do cover outpatient counseling. What’s covered depends on the benefits chosen by your employer—usually linked to the group number on your card. Our intake team will check your benefits before your first session so you’ll know exactly what’s included.</p>
+    </div>
+    </div>
+
+    <!-- 3rd toggle -->
+    <div class="toggle-pair">
+    <button class="toggle-btn" onclick="toggleSection('what-pay')">What Will I Pay?</button>
+    <div id="what-pay" class="toggle-content">
+        <p>Out-of-pocket costs vary by insurance plan. After billing your insurance, most clients pay between $20 and $50 per session—but we’ll verify your exact benefits before your first appointment so there are no surprises.</p>
+    </div>
+    </div>
+
+    <!-- 4th toggle -->
+    <div class="toggle-pair">
+    <button class="toggle-btn" onclick="toggleSection('specialties')">
+        <span class="label-wrap">Therapist Specialties</span>
+</button>
+<div id="specialties" class="toggle-content">
+<p>Every therapist at Advanced Counseling Solutions has years of experience and training in a variety of mental health areas. All are licensed professionals—such as LPCCs, LISWs, or Clinical Psychologists—and each brings their own specialization to the care we provide.</p>
+</div>
+</div>
+
+<!-- 5th toggle -->
+    <div class="toggle-pair">
+    <button class="toggle-btn" onclick="toggleSection('confidential')">Confidential Care</button>
+<div id="confidential" class="toggle-content">
+<p>Confidentiality is at the heart of meaningful counseling. Our therapists and staff are trained in professional ethics and privacy laws—and continue this training regularly to ensure your personal information is always protected.</p>
+</div>
+</div>
+
+
+<!-- 6th toggle -->
+<div class="toggle-pair">
+<button class="toggle-btn" onclick="toggleSection('finding-pace')">Finding Your Pace</button>
+<div id="finding-pace" class="toggle-content">
+<p>Unless required by court order, how long you stay in counseling is entirely up to you. Your therapist will help identify goals and check in regularly. It's your sense of growth that guides your pace.</p>
+</div>
+</div>
+
+<!-- 7th toggle -->
+<div class="toggle-pair">
+<button class="toggle-btn" onclick="toggleSection('payment-options')">Payment Options</button>
+<div id="payment-options" class="toggle-content">
+<p>We aim to make payment simple and flexible. You can pay using a credit card, HSA card, cash, or check. Use the Payment link to select a package or speak with your therapist for options.</p>
+</div>
+</div>
+
+<div class="faq-contact-cta">
+    <p>Still have questions?</p>
+    <a href="/contact.html" class="cta-button">Let’s Talk</a>
+</div>
+
+
+<div class="section-divider-footer"></div>
+<footer>
+    <p>&copy; 2025 Advanced Counseling Solutions. All rights reserved.</p>
+</footer>
+</body>
+</html>
