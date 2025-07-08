@@ -1,19 +1,25 @@
-// Toggle hamburger menu function
-function toggleMenu() {
-    const menu = document.getElementById('headerMenu');
-    menu.classList.toggle('show');
-}
-
-// Close menu when clicking outside
-document.addEventListener('click', function(event) {
-    const menu = document.getElementById('headerMenu');
-    const hamburger = document.querySelector('.hamburger-btn');
+document.addEventListener('DOMContentLoaded', function() {
+    // Find hamburger button - you need to tell me what your button looks like
+    const hamburgerBtn = document.querySelector('#hamburger-btn') || 
+                        document.querySelector('.hamburger-btn') || 
+                        document.querySelector('.menu-toggle');
     
-    if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
-        menu.classList.remove('show');
+    const menu = document.querySelector('.hamburger-menu');
+    
+    if (hamburgerBtn && menu) {
+        hamburgerBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            menu.classList.toggle('show');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!hamburgerBtn.contains(e.target) && !menu.contains(e.target)) {
+                menu.classList.remove('show');
+            }
+        });
     }
 });
-
 // Toggle FAQ sections
 function toggleSection(sectionId) {
     const content = document.getElementById(sectionId);
