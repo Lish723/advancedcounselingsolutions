@@ -1,0 +1,136 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Payment Portal | Advanced Counseling Solutions</title>
+    <link rel="stylesheet" href="payment-style.css?v=3" />
+    <script src="script.js" defer></script> <!-- Add this line -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="icon" href="data:,">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+<nav class="header-nav">
+    <div class="header-top-bar">
+        <div class="logo-wrapper">
+            <a href="/index.html">
+            <img src="https://advancedcounselingsolutions.com/wp-content/uploads/2021/10/ACS_HorzLogo_1021-e1635534070124.png" alt="Advanced Counseling Solutions logo" class="site-logo"></a>
+                <div style="display: none; color: rgba(66, 90, 59, 1); font-weight: 600; font-size: 1.1rem;">Advanced Counseling Solutions</div>
+                </div>
+        <div class="hamburger-wrapper">
+            <button class="hamburger-btn" aria-label="Toggle menu" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="hamburger-menu" id="mobileMenu">
+                <li class="menu-item"><a href="https://lish723.github.io/masterpiece/about.html"><span class="qodef-menu-item-inner"><span class="qodef-menu-item-text">About</span></span></a></li>
+                <li class="menu-item"><a href="https://lish723.github.io/masterpiece/services-what-to-expect.html"><span class="qodef-menu-item-inner"><span class="qodef-menu-item-text">Services & What To Expect</span></span></a></li>
+                <li class="menu-item"><a href="/advancedcounselingsolutions/get-to-know-our-clinicians/clinicians.html"><span class="qodef-menu-item-inner"><span class="qodef-menu-item-text">Meet the Clinician</span></span></a></li>
+                <li class="menu-item"><a href="/faq.html">FAQ</a></li>
+                <li class="menu-item"><a href="/media.html">Media</a></li>
+                <li class="menu-item"><a href="/contact-us.html">Contact-Us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="header-title-container">
+    <h1 class="contact-heading">Client Support Payment Portal</h1>
+</div>
+
+<h2 class="quote-left">Payments made easy, care made personal.</h2>
+
+<!-- Payment and therapy rates side by side -->
+<div class="payment-grid">
+    <section class="payment-section">
+        <h1 class="page-title">Client Payment Portal</h1>
+        <p class="page-tagline"><em>Payments made easy, care made personal.</em></p>
+
+        <form class="payment-form" action="/submit-payment" method="post">
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" name="amount" placeholder="$" required />
+
+            <label for="account">Name or Account Number</label>
+            <input type="text" id="account" name="account" placeholder="Enter full name or account ID" required />
+
+            <button type="submit">Submit Payment</button>
+        </form>
+    </section>
+
+    <section class="therapy-rates">
+        <h2>Therapy Service Rates</h2>
+        <p>Fees are based on licensure level, experience, and industry-standard UCR rates. Each session ranges between 45–90 minutes.</p>
+        <ul>
+            <li>Diagnostic Assessment – <strong>$90</strong></li>
+            <li>Individual Counseling – <strong>$90</strong></li>
+            <li>Marriage & Family Counseling – <strong>$90</strong></li>
+            <li>Psychological Testing & Reporting – <strong>$90/hr</strong></li>
+            <li>Drug & Alcohol Assessment – <strong>$90/hr</strong></li>
+            <li>Court Appearance (incl. prep) – <strong>$125/hr</strong></li>
+        </ul>
+    </section>
+</div>
+
+<!-- Payment methods and insurance side by side below -->
+<div class="content-grid">
+    <section class="accepted-payments">
+        <h3>Payment Methods Accepted</h3>
+        <ul>
+            <li>Cash</li>
+            <li>Check</li>
+            <li>American Express</li>
+            <li>Discover</li>
+            <li>Mastercard</li>
+            <li>Visa</li>
+            <li>Health Savings Account (HSA)</li>
+        </ul>
+    </section>
+
+    <section class="accepted-insurance">
+        <h4>Insurance Plans Accepted</h4>
+        <ul>
+            <li>Aetna | Aetna Coventry</li>
+            <li>Anthem</li>
+            <li>Anthem Blue Cross Blue Shield</li>
+            <li>Beacon Health Options</li>
+            <li>CareSource</li>
+            <li>Cigna</li>
+            <li>Medicaid</li>
+            <li>Medical Mutual</li>
+            <li>Molina Healthcare</li>
+            <li>MultiPlan</li>
+            <li>TRICARE</li>
+            <li>United Healthcare UHC | UBH</li>
+            <li>Out of Network</li>
+        </ul>
+    </section>
+</div>
+
+<div class="section-divider-footer"></div><footer>
+    <p>&copy; 2025 Advanced Counseling Solutions. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const button = document.querySelector('.hamburger-btn');
+    
+    menu.classList.toggle('visible');
+    button.classList.toggle('active');
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+    const menu = document.getElementById('mobileMenu');
+    const button = document.querySelector('.hamburger-btn');
+    const hamburgerWrapper = document.querySelector('.hamburger-wrapper');
+    
+    if (!hamburgerWrapper.contains(event.target)) {
+        menu.classList.remove('visible');
+        button.classList.remove('active');
+    }
+});
+</script>
+</body>
+</html>
