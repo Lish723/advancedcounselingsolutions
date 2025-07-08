@@ -116,7 +116,7 @@ header::after {
 
 .hamburger-menu {
     position: absolute;
-    top: calc(100% + 0.1rem);
+    top: 30px;
     right: 0;
     width: max-content;
     min-width: 160px;
