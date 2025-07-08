@@ -1,75 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Meet the Clinician – Advanced Counseling Solutions</title>
-<link rel="stylesheet" href="clinician-style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meet the Clinician – Advanced Counseling Solutions</title>
+    <link rel="stylesheet" href="clinician-style.css" />
+    <script src="clinician-script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-    <h1>Meet the Clinician</h1>
-    <p>Get to know the heart behind the healing. Our therapists bring empathy, expertise, and a deeply human presence to every session.</p>
-<div class="section-divider-with-icon">
-<div class="divider-icon">🌿</div>
-<div class="section-line"></div>
-</div>
-</header>
+    <header>
+        <div class="logo-container">
+            <a href="/index.html">
+                <img src="https://advancedcounselingsolutions.com/wp-content/uploads/2021/10/ACS_HorzLogo_1021-e1635534070124.png" alt="Advanced Counseling Solutions logo" class="site-logo"/>
+            </a>
+        </div>
+
+        <div class="hamburger-wrapper">
+            <button class="hamburger-btn" onclick="toggleMenu()" aria-label="Open Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="hamburger-menu" id="headerMenu">
+                <li class="menu-item"><a href="https://lish723.github.io/masterpiece/about.html">About</a></li>
+                <li class="menu-item"><a href="https://lish723.github.io/masterpiece/services-what-to-expect.html">Services & What To Expect</a></li>
+                <li class="menu-item"><a href="/faq.html">FAQ</a></li>
+                <li class="menu-item"><a href="/media.html">Media</a></li>
+                <li class="menu-item"><a href="/contact.html">Contact</a></li>
+                <li class="menu-item"><a href="/payment.html">Payment</a></li>
+            </ul>
+        </div>
+
+        <div class="header-top">
+            <h1>Meet the Clinician</h1>
+            <p>Get to know the heart behind the healing. Our therapists bring empathy, expertise, and a deeply human presence to every session.</p>
+        </div>
+        <div class="section-divider-with-icon">
+            <div class="divider-icon">🌿</div>
+            <div class="section-line"></div>
+        </div>
+    </header>
 
     <section class="therapist-card">
-<img src="mark-jones.jpg" alt="Portrait of Mark Jones, MSW, LSW in a calm, welcoming setting" class="therapist-img" />
+        <img src="mark-jones.jpg" alt="Portrait of Mark Jones, MSW, LSW in a calm, welcoming setting" class="therapist-img" />
 
-<div class="therapist-info">
-        <h2 class="clinician-name">Mark Jones, MSW, LSW</h2>
-<div class="pastel-bar"></div>
-        <p><strong>Location:</strong> Austintown</p>
-        <p>“I believe in creating a space where clients feel deeply heard, seen, and supported. My work centers on compassion, curiosity, and collaborative growth.”</div>
-
-<h3 class="section-subtitle">Explore Mark’s Approach</h3>
-
-<div class="clinician-sections">
-        <button class="toggle-btn" onclick="toggleSection('education')">Education</button>
-        <div id="education" class="toggle-content">
-        <ul>
-            <li>Master of Social Work (MSW) – Youngstown State University</li>
-            <li>Licensed Social Worker (LSW) – State of Ohio</li>
-        </ul>
+        <div class="therapist-info">
+            <h2 class="clinician-name">Mark Jones, MSW, LSW</h2>
+            <div class="pastel-bar"></div>
+            <p><strong>Location:</strong> Austintown</p>
+            <p>"I believe in creating a space where clients feel deeply heard, seen, and supported. My work centers on compassion, curiosity, and collaborative growth."</p>
         </div>
 
-        <button class="toggle-btn" onclick="toggleSection('specialties')">Specialties</button>
-        <div id="specialties" class="toggle-content">
-        <ul>
-            <li>Trauma Care & PTSD</li>
-            <li>Anxiety & Depression</li>
-            <li>Behavior Modification</li>
-            <li>Youth and Young Adult Mental Health</li>
-        </ul>
-        </div>
+        <h3 class="section-subtitle">Explore Mark's Approach</h3>
 
-        <button class="toggle-btn" onclick="toggleSection('client-focus')">Client Focus</button>
-        <div id="client-focus" class="toggle-content">
-<ul>
-            <li>Children (6+), Adolescents, Young Adults, Adults</li>
-            <li>Families</li>
-</ul>
-        </div>
+        <div class="clinician-sections">
+            <button class="toggle-btn" onclick="toggleSection('education')">Education</button>
+            <button class="toggle-btn" onclick="toggleSection('specialties')">Specialties</button>
+            <button class="toggle-btn" onclick="toggleSection('client-focus')">Client Focus</button>
+            <button class="toggle-btn" onclick="toggleSection('treatment')">Treatment Areas</button>
+            
+            <div id="education" class="toggle-content">
+                <ul>
+                    <li>Master of Social Work (MSW) – Youngstown State University</li>
+                    <li>Licensed Social Worker (LSW) – State of Ohio</li>
+                </ul>
+            </div>
 
-        <button class="toggle-btn" onclick="toggleSection('treatment')">Treatment Areas</button>
-        <div id="treatment" class="toggle-content">
-<ul>
-            <li>ADHD, Mood Disorders, OCD</li>
-            <li>Trauma Recovery, Grief, Parenting Transitions</li>
-            <li>Relationship Challenges, Life Coaching, Codependency</li>
-</ul>
+            <div id="specialties" class="toggle-content">
+                <ul>
+                    <li>Trauma Care & PTSD</li>
+                    <li>Anxiety & Depression</li>
+                    <li>Behavior Modification</li>
+                    <li>Youth and Young Adult Mental Health</li>
+                </ul>
+            </div>
+
+            <div id="client-focus" class="toggle-content">
+                <ul>
+                    <li>Children (6+), Adolescents, Young Adults, Adults</li>
+                    <li>Families</li>
+                </ul>
+            </div>
+
+            <div id="treatment" class="toggle-content">
+                <ul>
+                    <li>ADHD, Mood Disorders, OCD</li>
+                    <li>Trauma Recovery, Grief, Parenting Transitions</li>
+                    <li>Relationship Challenges, Life Coaching, Codependency</li>
+                </ul>
+            </div>
         </div>
-</div>
     </section>
-</main>
 
-<footer>
-    <p>&copy; 2025 Advanced Counseling Solutions. All rights reserved.</p>
-</footer>
+    <footer>
+        <p>&copy; 2025 Advanced Counseling Solutions. All rights reserved.</p>
+    </footer>
 
-<script src="script.js"></script>
+    <script src="clinician-style.js"></script>
 </body>
 </html>
