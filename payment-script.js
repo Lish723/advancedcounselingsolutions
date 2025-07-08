@@ -37,8 +37,7 @@ if (paymentForm) {
         alert("Please fill in both fields.");
         return;
     }
-
-      // Simulate success message
+   // Simulate success message
     paymentForm.innerHTML = `
         <p style="font-size: 1.2rem; text-align: center; color: #444; margin-top: 2rem;">
         ✅ Thank you! Your payment has been submitted.
@@ -47,3 +46,7 @@ if (paymentForm) {
     });
 }
 });
+function simulatePayment() {
+    alert("Payment simulation: Transaction processed successfully! (This is a demo)");
+}
+   
