@@ -24,11 +24,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Payment Form Simulation
 document.addEventListener("DOMContentLoaded", function () {
-const paymentForm = document.querySelector(".payment-form");
+const form = document.querySelector("form");
 
-if (paymentForm) {
-    paymentForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+if (form) {
+    form.addEventListener("submit", function (e) {
+    e.preventDefault(); // This stops the page jump
 
     const amount = document.getElementById("amount").value.trim();
     const account = document.getElementById("account").value.trim();
@@ -38,15 +38,13 @@ if (paymentForm) {
         return;
     }
    // Simulate success message
-    paymentForm.innerHTML = `
-        <p style="font-size: 1.2rem; text-align: center; color: #444; margin-top: 2rem;">
-        ✅ Thank you! Your payment has been submitted.
-        </p>
+   form.innerHTML = `
+       <div style="text-align: center; padding: 2rem;">
+                    <h2 style="color: green;">✅ Payment Successful!</h2>
+                    <p>Thank you! Your payment has been processed.</p>
+                    <p style="font-size: 0.9rem; color: #666;">(This is a simulation)</p>
+                </div>
     `;
     });
 }
 });
-function simulatePayment() {
-    alert("Payment simulation: Transaction processed successfully! (This is a demo)");
-}
-   
